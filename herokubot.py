@@ -38,8 +38,6 @@ def echo(bot, update):
         text = driver.find_element_by_tag_name("body").text
         if sahm in text :
             update.effective_message.reply_text("در حال بررسی")
-            driver.quit()
-            driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=111C1417")
             element1 = driver.find_element_by_xpath("//a[@class='TopIcon MwIcon MwQuery']")
             time.sleep(2)
             element1.click()
