@@ -22,7 +22,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 def start(bot, update):
     bot.send_sticker(chat_id=update.message.chat_id,
                      sticker='CAACAgIAAxkBAAIQGl8HwysLDNIkN92gF1U10eWk_LgtAAI0AgACVp29CjGNzk5PQoF3GgQ')
-    update.effective_message.reply_text("سلام!")
+    update.effective_message.reply_text("سلام از طرف گیت ها!")
 
 
 
