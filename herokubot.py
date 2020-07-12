@@ -35,18 +35,13 @@ def echo(bot, update):
         driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
         time.sleep(2)
         kol = driver.find_element_by_tag_name("body").text
-            if sahm in kol : 
+            if sahm in kol :
                 update.effective_message_reply_text("در حال بررسـی...")
-            #bot.send_sticker(chat_id=update.message.chat_id,
+                #bot.send_sticker(chat_id=update.message.chat_id,
                              #sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
     except:
         update.effective_message.reply_text("آه! متاسفانه حین انجام پروسه با مشکل مواجه شدیم لطفا دوباره امتحان کنید")
-                             
-    #if sahm in kol : 
-    #update.effective_message_reply_text("در حال بررسـی...")
-                             
-                             
-                             
+                         
                              
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
