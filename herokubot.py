@@ -22,7 +22,8 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 def start(bot, update):
     bot.send_sticker(chat_id=update.message.chat_id,
                      sticker='CAACAgIAAxkBAAIQGl8HwysLDNIkN92gF1U10eWk_LgtAAI0AgACVp29CjGNzk5PQoF3GgQ')
-    update.effective_message.reply_text("سلام برادر!")
+    update.effective_message.reply_text("سلام!")
+
 
 
 
@@ -30,19 +31,17 @@ def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')
-    
+
     try:
-        driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
+        driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=111C1417")
         time.sleep(2)
-        kol = driver.find_element_by_tag_name("body").text
-            if sahm in kol :
-                update.effective_message_reply_text("در حال بررسـی...")
-                #bot.send_sticker(chat_id=update.message.chat_id,
-                             #sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
+        text = driver.find_element_by_tag_name("body").text
+        if sahm in text :
+            update.effective_message.reply_text("در حال بررسی این سهم کوفتی آخر شبی وقت گیر آوردیا ")
+            
     except:
-        update.effective_message.reply_text("آه! متاسفانه حین انجام پروسه با مشکل مواجه شدیم لطفا دوباره امتحان کنید")
-                         
-                             
+        update.effective_message.reply_text("بنظر میرسه نام سهم رو اشتباه وارد کردی ، دوباره تلاش کن!")
+
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
 
