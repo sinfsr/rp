@@ -33,9 +33,13 @@ def echo(bot, update):
     sahm = eslahy.replace('ک', 'ك')
 
     try:
+        update.effective_message.reply_text("1")
         driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=111C1417")
+        update.effective_message.reply_text("2")
         time.sleep(2)
+        update.effective_message.reply_text("3")
         element1 = driver.find_element_by_xpath("//a[@class='TopIcon MwIcon MwQuery']")
+        update.effective_message.reply_text("4")
         time.sleep(2)
         element1.click()
         element2 = driver.find_element_by_xpath("//div[@class='awesome black']")
