@@ -32,9 +32,13 @@ def echo(bot, update):
     sahm = eslahy.replace('ک', 'ك')
 
     try:
+        update.effective_message_reply_text("1")
         driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
+        update.effective_message_reply_text("1")
         time.sleep(2)
+        update.effective_message_reply_text("1")
         kol = driver.find_element_by_tag_name("body").text
+        update.effective_message_reply_text("1")
         if sahm in kol : 
             update.effective_message_reply_text("در حال بررسـی...")
             #bot.send_sticker(chat_id=update.message.chat_id,
