@@ -32,13 +32,13 @@ def echo(bot, update):
     sahm = eslahy.replace('ک', 'ك')
 
     try:
-        driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=111C1417")
+        driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=15131F")
         time.sleep(2)
         kol = driver.find_element_by_tag_name("body").text
         if sahm in kol : 
             update.effective_message_reply_text("پاندا در حال آنالیز " + sahm + "است.")
-            bot.send_sticker(chat_id=update.message.chat_id,
-                             sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
+            #bot.send_sticker(chat_id=update.message.chat_id,
+                             #sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
     except:
         update.effective_message.reply_text("آه! متاسفانه حین انجام پروسه با مشکل مواجه شدیم لطفا دوباره امتحان کنید")
 
