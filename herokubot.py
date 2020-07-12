@@ -36,7 +36,7 @@ def echo(bot, update):
         time.sleep(2)
         kol = driver.find_element_by_tag_name("body").text
         if sahm in kol : 
-            update.effective_message_reply_text("پاندا در حال آنالیز " + sahm + "است.")
+            update.effective_message_reply_text("در حال بررسـی...")
             #bot.send_sticker(chat_id=update.message.chat_id,
                              #sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
     except:
