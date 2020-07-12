@@ -1,6 +1,8 @@
 import logging
 import os
 from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 import time
 from telegram.ext import Updater, CommandHandler, MessageHandler, Filters
 
@@ -38,7 +40,7 @@ def echo(bot, update):
         update.effective_message.reply_text("2")
         time.sleep(2)
         update.effective_message.reply_text("3")
-        element1 = driver.find_element_by_xpath("//a[@class='TopIcon MwIcon MwQuery']")
+        element1 = driver.find_element(By.XPATH , "//a[@class='TopIcon MwIcon MwQuery']")
         update.effective_message.reply_text("4")
         time.sleep(2)
         element1.click()
