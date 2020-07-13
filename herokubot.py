@@ -85,11 +85,11 @@ def echo(bot, update):
         text = driver.find_element_by_tag_name("body").text
         if sahm in text:
             update.effective_message.reply_text("سهم در تکست است")          
-        driver.switch_to_window(driver.window_handles[1])
-        text1 = driver.find_element_by_tag_name("body").text
-        update.effective_message.reply_text("1")
-        if sahm in text1 :
-            update.effective_message.reply_text("سهم در تکست1 است")   
+            driver.switch_to_window(driver.window_handles[1])
+            text1 = driver.find_element_by_tag_name("body").text
+            update.effective_message.reply_text("1")
+            if sahm in text1 :
+                update.effective_message.reply_text("سهم در تکست1 است")   
     except:
         update.effective_message.reply_text("EROR")
            
