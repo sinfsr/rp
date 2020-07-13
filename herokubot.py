@@ -105,7 +105,7 @@ def start(bot, update):
 
     except:
         update.effective_message.reply_text("آخ! مغزم ترکید...")
-
+        driver.quit()
 
 
 
