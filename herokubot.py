@@ -1,7 +1,7 @@
 import logging
 import os
 from selenium import webdriver
-import pyperclip
+import clipboard
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
@@ -66,6 +66,7 @@ def echo(bot, update):
         elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
         time.sleep(2)
         elememt5.click()
+        update.effective_message.reply_text("fuckin' finish")
         
         
         text = driver.find_element_by_tag_name("body").text
