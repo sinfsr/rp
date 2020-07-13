@@ -48,7 +48,7 @@ def start(bot, update):
         elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
         update.effective_message.reply_text("7")
         time.sleep(2)
-        elememt4.send_keys('(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        elememt4.send_keys('(pe)>=300')
         elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
         time.sleep(2)
         elememt5.click()
