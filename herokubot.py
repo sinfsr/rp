@@ -1,6 +1,7 @@
 import logging
 import os
 from selenium import webdriver
+import pyperclip
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
