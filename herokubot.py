@@ -56,6 +56,11 @@ def start(bot, update):
         windows_before  = driver.current_window_handle
         driver.execute_script("window.open('http://www.tsetmc.com/Loader.aspx?ParTree=15131F')") #1 
         update.effective_message.reply_text("9")
+        driver.switch_to_window(driver.window_handles[0])
+        text = driver.find_element_by_tag_name("body").text
+        driver.switch_to_window(driver.window_handles[1])
+        text2 = driver.find_element_by_tag_name("body").text
+        update.effective_message.reply_text("well done.")
         
 
 
@@ -68,11 +73,8 @@ def start(bot, update):
 def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
-    sahm = eslahy.replace('ک', 'ك')
-    driver.switch_to_window(driver.window_handles[0])
-    text = driver.find_element_by_tag_name("body").text
-    driver.switch_to_window(driver.window_handles[1])
-    text2 = driver.find_element_by_tag_name("body").text
+    sahm = eslahy.replace('ک', 'ك')    
+
         if sahm in text2 :
         update.effective_message.reply_text("نام سهم بدرستی وارد شده است")
     else:
