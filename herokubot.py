@@ -28,6 +28,7 @@ def start(bot, update):
     update.effective_message.reply_text("سلام!")
     
     try:
+        #kol
         update.effective_message.reply_text("1")
         driver.get("http://www.tsetmc.com/")
         time.sleep(2)
@@ -35,7 +36,15 @@ def start(bot, update):
         update.effective_message.reply_text("2")
         time.sleep(2)
         element0.click()
+        #1mm
+        windows_before  = driver.current_window_handle
+        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+        driver.switch_to_window(driver.window_handles[1])
+        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("3")
+        time.sleep(2)
+        element10.click()
+        update.effective_message.reply_text("3.5")
         element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
         update.effective_message.reply_text("4")
         time.sleep(2)
@@ -51,19 +60,12 @@ def start(bot, update):
         elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
         update.effective_message.reply_text("7")
         time.sleep(2)
-        elememt4.send_keys('(pe)>=300')
+        elememt4.send_keys('(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
         elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
         time.sleep(2)
         elememt5.click()
         update.effective_message.reply_text("8")
-        windows_before  = driver.current_window_handle
-        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
-        driver.switch_to_window(driver.window_handles[1])
-        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-        update.effective_message.reply_text("9")
-        time.sleep(2)
-        element10.click()
-        update.effective_message.reply_text("10")
+
 
 
         
@@ -82,16 +84,21 @@ def echo(bot, update):
     try:
         update.effective_message.reply_text("0")
         driver.switch_to_window(driver.window_handles[0])
-        text = driver.find_element_by_tag_name("body").text
-        if sahm in text:
-            update.effective_message.reply_text("سهم در تکست است")          
+        kol = driver.find_element_by_tag_name("body").text
+        if sahm in kol:
+            update.effective_message.reply_text("در حال بررسی...")          
             driver.switch_to_window(driver.window_handles[1])
-            text1 = driver.find_element_by_tag_name("body").text
+            mm1 = driver.find_element_by_tag_name("body").text
             update.effective_message.reply_text("1")
-            if sahm in text1 :
-                update.effective_message.reply_text("سهم در تکست1 است")   
+            if sahm in mm1 :
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول میباشد.")   
+            else:
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول نمیباشد.")    
+        else:
+            update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
+            
     except:
-        update.effective_message.reply_text("EROR")
+        update.effective_message.reply_text("آه! مشکلی رخ داده")
            
 
 
