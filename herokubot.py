@@ -49,6 +49,7 @@ def start(bot, update):
         update.effective_message.reply_text("sett1")
         time.sleep(2)
         element11.click()
+        time.sleep(2)
         element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
         update.effective_message.reply_text("sett2")
         time.sleep(2)
@@ -104,7 +105,7 @@ def start(bot, update):
 
     except:
         update.effective_message.reply_text("آخ! مغزم ترکید...")
-        driver.quit()
+        
 
 
 
