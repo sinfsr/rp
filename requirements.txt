@@ -1,4 +1,4 @@
 python-telegram-bot
 selenium~=3.141.0
-pyperclip~=1.8.0
+clipboard~=0.0.4
 
