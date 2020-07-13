@@ -63,15 +63,9 @@ def start(bot, update):
         update.effective_message.reply_text("9")
         time.sleep(2)
         element10.click()
-        
         update.effective_message.reply_text("10")
-        driver.switch_to_window(driver.window_handles[0])
-        text = driver.find_element_by_tag_name("body").text
-        driver.switch_to_window(driver.window_handles[1])
-        text2 = driver.find_element_by_tag_name("body").text
-        update.effective_message.reply_text("well done.")
-        
-        update.effective_message.reply_text("11")
+
+
         
 
 
@@ -85,16 +79,18 @@ def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')    
+    try:
+        update.effective_message.reply_text("0")
+        driver.switch_to_window(driver.window_handles[0])
+        text = driver.find_element_by_tag_name("body").text
+        driver.switch_to_window(driver.window_handles[1])
+        text1 = driver.find_element_by_tag_name("body").text
+        update.effective_message.reply_text("1")
+    except:
+        update.effective_message.reply_text("EROR")
+           
 
-    if sahm in text2 :
-        update.effective_message.reply_text("نام سهم بدرستی وارد شده است")
-    else:
-        update.effective_message.reply_text("به نظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن")
-    
-    if sahm in text :
-        update.effective_message.reply_text("سهم دارای ورود پول هوشمند است")
-    else:
-        update.effective_message.reply_text("سهم دارای ورود پول هوشمند نیست")
+
 
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
