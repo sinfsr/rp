@@ -40,7 +40,7 @@ def echo(bot, update):
         update.effective_message.reply_text("2")
         time.sleep(2)
         update.effective_message.reply_text("3")
-        element1 = driver.find_element(By.XPATH , '//*[@id="SettingsDesc"]/div[1]/a[7]')
+        element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
         update.effective_message.reply_text("4")
         time.sleep(2)
         element1.click()
