@@ -97,6 +97,63 @@ def start(bot, update):
         elememt5.click()
         update.effective_message.reply_text("8")
         #2mm   
+        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+        driver.switch_to_window(driver.window_handles[1])
+        element20 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+        element20.click()
+        update.effective_message.reply_text("new tab created and clicked on dideban")
+        time.sleep(2)
+        element21 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+        update.effective_message.reply_text("sett1")
+        time.sleep(2)
+        element21.click()
+        time.sleep(2)
+        element22 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
+        update.effective_message.reply_text("sett2")
+        time.sleep(2)
+        element22.click()  
+        time.sleep(1.9)
+        element23 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+        update.effective_message.reply_text("sett1")
+        time.sleep(2)
+        element23.click()
+        time.sleep(2)
+        element24 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
+        update.effective_message.reply_text("sett2")
+        time.sleep(2)
+        element24.click()           
+        time.sleep(2)
+        element25 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+        update.effective_message.reply_text("sett1")
+        time.sleep(1.9)
+        element25.click()
+        time.sleep(2)
+        element26 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
+        update.effective_message.reply_text("sett2")
+        time.sleep(2)
+        element26.click()  
+        time.sleep(1.9)
+        update.effective_message.reply_text("3.5")
+        element27 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
+        update.effective_message.reply_text("4")
+        time.sleep(2)
+        element27.click()  
+        element28 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
+        update.effective_message.reply_text("5")
+        time.sleep(2)
+        element28.click()
+        elememt29 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
+        update.effective_message.reply_text("6")
+        time.sleep(2)
+        elememt29.click()
+        elememt210 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
+        update.effective_message.reply_text("7")
+        time.sleep(2)
+        elememt210.send_keys('(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        elememt211 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
+        time.sleep(2)
+        elememt211.click()
+        update.effective_message.reply_text("8") 
 
 
 
@@ -114,6 +171,8 @@ def echo(bot, update):
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')    
     try:
+        bot.send_sticker(chat_id=update.message.chat_id,
+                         sticker='CAACAgIAAxkBAAIQIF8LKeAAAYf7kOPwvfkuJhaTBQloegACLwIAAladvQqEjNbr9zqv7hoE')
         update.effective_message.reply_text("در حال بررسی...")
         driver.switch_to_window(driver.window_handles[0])
         kol = driver.find_element_by_tag_name("body").text
@@ -134,7 +193,10 @@ def echo(bot, update):
             update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
             
     except:
-        update.effective_message.reply_text("آه! مشکلی رخ داده")
+        update.effective_message.reply_text("آه! مشکلی رخ داده، لطفا با پشتیبانی تماس بگیرید...")
+        bot.send_sticker(chat_id=update.message.chat_id,
+                         sticker='CAACAgIAAxkBAAIQHV8LKaspEnW1gToEbT4H1QjXXSS_AAIrAgACVp29Cp1dR4-5BfNBGgQ')
+        
            
 
 
