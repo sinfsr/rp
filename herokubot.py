@@ -75,7 +75,7 @@ def echo(bot, update):
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')    
 
-        if sahm in text2 :
+    if sahm in text2 :
         update.effective_message.reply_text("نام سهم بدرستی وارد شده است")
     else:
         update.effective_message.reply_text("به نظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن")
