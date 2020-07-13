@@ -58,10 +58,11 @@ def start(bot, update):
         update.effective_message.reply_text("8")
         windows_before  = driver.current_window_handle
         driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
-        element0 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+        driver.switch_to_window(driver.window_handles[1])
+        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("9")
         time.sleep(2)
-        element0.click()
+        element10.click()
         
         update.effective_message.reply_text("10")
         driver.switch_to_window(driver.window_handles[0])
