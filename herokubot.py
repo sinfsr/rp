@@ -31,6 +31,7 @@ def start(bot, update):
         #kol
         update.effective_message.reply_text("1")
         driver.get("http://www.tsetmc.com/")
+        update.effective_message.reply_text("1.5")
         time.sleep(2)
         element0 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("2")
@@ -41,9 +42,8 @@ def start(bot, update):
         driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
         driver.switch_to_window(driver.window_handles[1])
         element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-        update.effective_message.reply_text("3")
-        time.sleep(2)
         element10.click()
+        update.effective_message.reply_text("new tab created and clicked on dideban")
         time.sleep(2)
         element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
         update.effective_message.reply_text("sett1")
@@ -95,8 +95,7 @@ def start(bot, update):
         time.sleep(2)
         elememt5.click()
         update.effective_message.reply_text("8")
-        #2mm
-        mm2 = "q"   
+        #2mm   
 
 
 
