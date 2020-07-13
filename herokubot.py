@@ -52,8 +52,10 @@ def start(bot, update):
         elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
         time.sleep(2)
         elememt5.click()
-        update.effective_message.reply_text("fuckin' finish")
-        
+        update.effective_message.reply_text("8")
+        windows_before  = driver.current_window_handle
+        driver.execute_script("window.open('http://www.tsetmc.com/Loader.aspx?ParTree=15131F')") #1 
+        update.effective_message.reply_text("9")
         
 
 
@@ -67,7 +69,15 @@ def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')
+    driver.switch_to_window(driver.window_handles[0])
     text = driver.find_element_by_tag_name("body").text
+    driver.switch_to_window(driver.window_handles[1])
+    text2 = driver.find_element_by_tag_name("body").text
+        if sahm in text2 :
+        update.effective_message.reply_text("نام سهم بدرستی وارد شده است")
+    else:
+        update.effective_message.reply_text("به نظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن")
+    
     if sahm in text :
         update.effective_message.reply_text("سهم دارای ورود پول هوشمند است")
     else:
