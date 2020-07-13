@@ -29,7 +29,6 @@ def start(bot, update):
 
 
 
-
 def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
