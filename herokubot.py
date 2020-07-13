@@ -28,13 +28,13 @@ def start(bot, update):
     update.effective_message.reply_text("سلام!")
     
     try:
-        /html/body/div[3]/div[2]/a[4]
         update.effective_message.reply_text("1")
         driver.get("http://www.tsetmc.com/")
         time.sleep(2)
-        element1 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+        element0 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("2")
         time.sleep(2)
+        element0.click()
         update.effective_message.reply_text("3")
         element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
         update.effective_message.reply_text("4")
@@ -57,13 +57,20 @@ def start(bot, update):
         elememt5.click()
         update.effective_message.reply_text("8")
         windows_before  = driver.current_window_handle
-        driver.execute_script("window.open('http://www.tsetmc.com/Loader.aspx?ParTree=15131F')") #1 
+        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+        element0 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("9")
+        time.sleep(2)
+        element0.click()
+        
+        update.effective_message.reply_text("10")
         driver.switch_to_window(driver.window_handles[0])
         text = driver.find_element_by_tag_name("body").text
         driver.switch_to_window(driver.window_handles[1])
         text2 = driver.find_element_by_tag_name("body").text
         update.effective_message.reply_text("well done.")
+        
+        update.effective_message.reply_text("11")
         
 
 
