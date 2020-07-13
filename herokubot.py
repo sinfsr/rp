@@ -58,11 +58,7 @@ def start(bot, update):
         update.effective_message.reply_text("fuckin' finish")
         
         
-        text = driver.find_element_by_tag_name("body").text
-        if sahm in text :
-            update.effective_message.reply_text("سهم دارای ورود پول هوشمند است")
-        else:
-            update.effective_message.reply_text("سهم دارای ورود پول هوشمند نیست")
+
 
     except:
         update.effective_message.reply_text("آخ! مغزم ترکید...")
@@ -74,6 +70,11 @@ def echo(bot, update):
     a = update.effective_message.text
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')
+    text = driver.find_element_by_tag_name("body").text
+    if sahm in text :
+        update.effective_message.reply_text("سهم دارای ورود پول هوشمند است")
+    else:
+        update.effective_message.reply_text("سهم دارای ورود پول هوشمند نیست")
 
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
