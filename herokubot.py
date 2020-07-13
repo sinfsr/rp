@@ -97,8 +97,8 @@ def start(bot, update):
         elememt5.click()
         update.effective_message.reply_text("8")
         #2mm   
-        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
-        driver.switch_to_window(driver.window_handles[1])
+        driver.execute_script("window.open('http://www.tsetmc.com/')") #2 
+        driver.switch_to_window(driver.window_handles[2])
         element20 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         element20.click()
         update.effective_message.reply_text("new tab created and clicked on dideban")
