@@ -28,8 +28,11 @@ def start(bot, update):
     update.effective_message.reply_text("سلام!")
     
     try:
+        /html/body/div[3]/div[2]/a[4]
         update.effective_message.reply_text("1")
-        driver.get("http://www.tsetmc.com/Loader.aspx?ParTree=15131F#")
+        driver.get("http://www.tsetmc.com/")
+        time.sleep(2)
+        element1 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
         update.effective_message.reply_text("2")
         time.sleep(2)
         update.effective_message.reply_text("3")
