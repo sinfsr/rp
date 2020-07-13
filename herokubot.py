@@ -53,7 +53,7 @@ def start(bot, update):
         update.effective_message.reply_text("sett2")
         time.sleep(2)
         element12.click()  
-        
+        time.sleep(1.9)
         element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
         update.effective_message.reply_text("sett1")
         time.sleep(2)
@@ -62,16 +62,16 @@ def start(bot, update):
         update.effective_message.reply_text("sett2")
         time.sleep(2)
         element14.click()           
-        
+        time.sleep(2)
         element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
         update.effective_message.reply_text("sett1")
-        time.sleep(2)
+        time.sleep(1.9)
         element15.click()
         element16 = driver.find_element(By.XPATH , '//*[@id="ModalWindowInner1"]/div[1]/div[34]')
         update.effective_message.reply_text("sett2")
         time.sleep(2)
         element16.click()  
-        
+        time.sleep(1.9)
         update.effective_message.reply_text("3.5")
         element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
         update.effective_message.reply_text("4")
@@ -94,34 +94,7 @@ def start(bot, update):
         elememt5.click()
         update.effective_message.reply_text("8")
         #2mm
-        windows_before  = driver.current_window_handle
-        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
-        driver.switch_to_window(driver.window_handles[1])
-        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-        update.effective_message.reply_text("3")
-        time.sleep(2)
-        element10.click()
-        update.effective_message.reply_text("3.5")
-        element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
-        update.effective_message.reply_text("4")
-        time.sleep(2)
-        element1.click()  
-        element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
-        update.effective_message.reply_text("5")
-        time.sleep(2)
-        element2.click()
-        elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
-        update.effective_message.reply_text("6")
-        time.sleep(2)
-        elememt3.click()
-        elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
-        update.effective_message.reply_text("7")
-        time.sleep(2)
-        elememt4.send_keys('(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
-        elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
-        time.sleep(2)
-        elememt5.click()
-        update.effective_message.reply_text("8")        
+        mm2 = "q"   
 
 
 
