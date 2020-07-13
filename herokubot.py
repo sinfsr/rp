@@ -59,10 +59,7 @@ def echo(bot, update):
         elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
         update.effective_message.reply_text("7")
         time.sleep(2)
-        elememt4.click()
-        clipboard.copy("abc")  # now the clipboard content will be string "abc"
-        update.effective_message.reply_text("pycoppy done!!!")
-        elememt4.send_keys(Keys.CONTROL, 'v')
+        elememt4.send_keys('foo')
         elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
         time.sleep(2)
         elememt5.click()
