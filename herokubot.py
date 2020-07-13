@@ -65,6 +65,35 @@ def start(bot, update):
         time.sleep(2)
         elememt5.click()
         update.effective_message.reply_text("8")
+        #2mm
+        windows_before  = driver.current_window_handle
+        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+        driver.switch_to_window(driver.window_handles[1])
+        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+        update.effective_message.reply_text("3")
+        time.sleep(2)
+        element10.click()
+        update.effective_message.reply_text("3.5")
+        element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
+        update.effective_message.reply_text("4")
+        time.sleep(2)
+        element1.click()  
+        element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
+        update.effective_message.reply_text("5")
+        time.sleep(2)
+        element2.click()
+        elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
+        update.effective_message.reply_text("6")
+        time.sleep(2)
+        elememt3.click()
+        elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
+        update.effective_message.reply_text("7")
+        time.sleep(2)
+        elememt4.send_keys('(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
+        time.sleep(2)
+        elememt5.click()
+        update.effective_message.reply_text("8")        
 
 
 
@@ -82,18 +111,22 @@ def echo(bot, update):
     eslahy = a.replace('ی', 'ي')
     sahm = eslahy.replace('ک', 'ك')    
     try:
-        update.effective_message.reply_text("0")
+        update.effective_message.reply_text("در حال بررسی...")
         driver.switch_to_window(driver.window_handles[0])
         kol = driver.find_element_by_tag_name("body").text
-        if sahm in kol:
-            update.effective_message.reply_text("در حال بررسی...")          
+        if sahm in kol:       
             driver.switch_to_window(driver.window_handles[1])
             mm1 = driver.find_element_by_tag_name("body").text
-            update.effective_message.reply_text("1")
             if sahm in mm1 :
                 update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول میباشد.")   
             else:
-                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول نمیباشد.")    
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول نمیباشد.") 
+            driver.switch_to_window(driver.window_handles[2])
+            mm2 = driver.find_element_by_tag_name("body").text
+            if sahm in mm2 :
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم میباشد.")   
+            else:
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم نمیباشد.")                   
         else:
             update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
             
