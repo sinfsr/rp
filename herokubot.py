@@ -53,6 +53,9 @@ def echo(bot, update):
         update.effective_message.reply_text("6")
         time.sleep(2)
         elememt3.click()
+        windows_before  = driver.current_window_handle
+        driver.execute_script("window.open('https://www.yahoo.com')")
+        update.effective_message.reply_text("new tab created")
         elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
         update.effective_message.reply_text("7")
         time.sleep(2)
