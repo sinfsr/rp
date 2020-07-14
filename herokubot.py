@@ -25,86 +25,130 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 def start(bot, update):
     bot.send_sticker(chat_id=update.message.chat_id,
                      sticker='CAACAgIAAxkBAAIQGl8HwysLDNIkN92gF1U10eWk_LgtAAI0AgACVp29CjGNzk5PQoF3GgQ')
-    update.effective_message.reply_text("سلام!")
+    update.effective_message.reply_text("سلام! به پاندا خوش اومدی...")
     
+def run(bot, update):    
     try:
         #kol
-        update.effective_message.reply_text("1")
+        update.effective_message.reply_text("running.")
         driver.get("http://www.tsetmc.com/")
-        update.effective_message.reply_text("1.5")
+        update.effective_message.reply_text("driver geted.")
         time.sleep(2)
         element0 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-        update.effective_message.reply_text("2")
+        update.effective_message.reply_text("almost saham finished.")
         time.sleep(2)
         element0.click()
         #1mm
         windows_before  = driver.current_window_handle
-        update.effective_message.reply_text("def starting")
+        update.effective_message.reply_text("handeling funtions.")
         def fil(ntab , fl):
             driver.execute_script("window.open('http://www.tsetmc.com/')")  
             driver.switch_to_window(driver.window_handles[ntab])
             element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
             element10.click()
-            update.effective_message.reply_text("new tab created and clicked on dideban")
+            update.effective_message.reply_text("new tab created and clicked on dideban.")
             time.sleep(2)
             element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("sett1")
+            update.effective_message.reply_text("set11")
             time.sleep(2)
             element11.click()
             time.sleep(2)
             element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
-            update.effective_message.reply_text("sett2")
+            update.effective_message.reply_text("set12")
             time.sleep(2)
             element12.click()  
             time.sleep(1.9)
             element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("sett1")
+            update.effective_message.reply_text("set21")
             time.sleep(2)
             element13.click()
             time.sleep(2)
             element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
-            update.effective_message.reply_text("sett2")
+            update.effective_message.reply_text("set22")
             time.sleep(2)
             element14.click()           
             time.sleep(2)
             element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("sett1")
+            update.effective_message.reply_text("set31")
             time.sleep(1.9)
             element15.click()
             time.sleep(2)
             element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
-            update.effective_message.reply_text("sett2")
+            update.effective_message.reply_text("set32")
             time.sleep(2)
             element16.click()  
             time.sleep(1.9)
-            update.effective_message.reply_text("3.5")
+            update.effective_message.reply_text("starting filter.")
             element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
-            update.effective_message.reply_text("4")
             time.sleep(2)
             element1.click()  
             element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
-            update.effective_message.reply_text("5")
+            update.effective_message.reply_text("locating and so on.")
             time.sleep(2)
             element2.click()
             elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
-            update.effective_message.reply_text("6")
+            update.effective_message.reply_text("So")
             time.sleep(2)
             elememt3.click()
             elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
-            update.effective_message.reply_text("7")
+            update.effective_message.reply_text("Almost there.")
             time.sleep(2)
             elememt4.send_keys(fl)
             elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
             time.sleep(2)
             elememt5.click()
-            update.effective_message.reply_text("8")
+            update.effective_message.reply_text("funtion finished.")
             
         fil(1 , '(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
         fil(2 , '(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        fil(3,'(tvol)>1.5*[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        fil(4,'(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        fil(5,'(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        fil(6,'(tvol)>1.5*[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        fil(7,'(tvol)>([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(8,'(tvol)>[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(9,'(tvol)>[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(10,'(tvol)>([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        update.effective_message.reply_text("done 10")
+        fil(11,'(tvol)>[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        fil(12,'(tvol)>[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)')
+        fil(13,'(ct).Buy_I_Volume>0.5*(tvol)&&(ct).Sell_N_Volume>0.5*(tvol)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(14,'(ct).Buy_I_Volume>0.7*(tvol)&&(ct).Sell_N_Volume>0.7*(tvol)')
+        fil(15,'(ct).Buy_CountN>=2*((ct).Sell_CountN)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(16,'(ct).Buy_CountN>=5*((ct).Sell_CountN)')
+        fil(17,'(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0')
+        fil(18,'(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0')
+        fil(19,'(tvol)>1.5*[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0')
+        fil(20,'(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        update.effective_message.reply_text("done 20")
+        fil(21,'(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        fil(22,'(tvol)>1.5*[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)<=(pc)&&(plp)<0&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        fil(23,'(tvol)>([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(24,'(tvol)>[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(25,'(tvol)>[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(26,'(tvol)>([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        fil(27,'(tvol)>[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        fil(28,'(tvol)>[is6]&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)&&(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)')
+        fil(29,'(ct).Buy_N_Volume>0.5*(tvol)&&(ct).Sell_I_Volume>0.5*(tvol)&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(30,'(ct).Buy_N_Volume>0.7*(tvol)&&(ct).Sell_I_Volume>0.7*(tvol)')
+        update.effective_message.reply_text("done 30")
+        fil(31,'(ct).Sell_CountN>=2*((ct).Buy_CountN)&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(32,'(ct).Sell_CountN>=5*((ct).Buy_CountN)')
+        fil(33,'(pl)>=(pc)*1.03&&((ct).Buy_I_Volume/(ct).Buy_CountI)>((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(34,'(plp)-(pcp)>2&&(plc)<0&&(pmin)==(tmin)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(35,'(pl)>=(pc)*1.03')
+        fil(36,'(plp)-(pcp)>2&&(plc)<0&&(pmin)==(tmin)')
+        fil(37,'(pl)*1.03<=(pc)&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(38,'(pcp)-(plp)>2&&((ct).Buy_I_Volume/(ct).Buy_CountI)<((ct).Sell_I_Volume/(ct).Sell_CountI)')
+        fil(39,'(pl)*1.03<=(pc)')
+        fil(40,'(pcp)-(plp)>2')
+        update.effective_message.reply_text("done 40")
+        fil(41,'(tvol)>5*(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)')
+        fil(42,'(tvol)>[is5]&&(tvol)>2*[is6]')
+        fil(43,'(tvol)>4*(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J)/6)')
+        fil(44,'(pc)<0.97*[ih][0].PClosing&&[ih][0].PClosing<0.97*[ih][1].PClosing&&[ih][1].PClosing<0.97*[ih][2].PClosing&&[ih][2].PClosing<0.97*[ih][3].PClosing&&(tvol)>=([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30')
+        fil(45,'(tvol)>[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>3*((ct).Sell_I_Volume/(ct).Sell_CountI)')
         update.effective_message.reply_text("all done.")
-
-
-
 
     except:
         update.effective_message.reply_text("آخ! مغزم ترکید...")
@@ -126,20 +170,51 @@ def echo(bot, update):
             def tahlilgar(tfn , tr, fl):
                 driver.switch_to_window(driver.window_handles[tfn])
                 mm = driver.find_element_by_tag_name("body").text
+                driver.refresh()
                 if sahm in mm :
                     update.effective_message.reply_text(tr)
                 else:
                     update.effective_message.reply_text(fl) 
             tahlilgar(1 ,
                       'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم اول میباشد!' ,
-                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم اول نمیباشد!'
+                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم اول نمیباشد.'
                      )
-            tahlilgar(2 ,
-                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم دوم میباشد!' ,
-                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم دوم نمیباشد!'
-                     )            
+            tahlilgar(2,
+                      'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند بوده است!' ,
+                      'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند نبوده است.' 
+                     )
+            tahlilgar(3,
+                      'ورود پول هوشمند با الگوریتم سوم برای نماد #' + sahm + 'مشهود میباشد!' ,
+                      'ورود پول هوشمند با الگوریتم سوم برای نماد #' + sahm + 'مشهود نمیباشد.'
+                     )
+                     )
+            tahlilgar(4,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
+            tahlilgar(2,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
+                     )
+            tahlilgar(2,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
+            tahlilgar(2,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
+                     )
+            tahlilgar(2,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
+            tahlilgar(2,
+                      'x' + sahm + 'x' ,
+                      'x' + sahm + 'x'
+                     )
             
-
             
             
                    
@@ -177,6 +252,7 @@ if __name__ == "__main__":
     dp = updater.dispatcher
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
+    dp.add_handler(CommandHandler('run', run))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_error_handler(error)
 
