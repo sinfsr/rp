@@ -18,68 +18,17 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 ########
 ########
 
-def filtering(ntab, fltr):
-    try:
-        #nmm
-        driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
-        driver.switch_to_window(driver.window_handles[int(ntab)]])
-        element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-        element10.click()
-        update.effective_message.reply_text("new tab created and clicked on dideban")
-        time.sleep(2)
-        element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-        update.effective_message.reply_text("sett1")
-        time.sleep(2)
-        element11.click()
-        time.sleep(2)
-        element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
-        update.effective_message.reply_text("sett2")
-        time.sleep(2)
-        element12.click()  
-        time.sleep(1.9)
-        element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-        update.effective_message.reply_text("sett1")
-        time.sleep(2)
-        element13.click()
-        time.sleep(2)
-        element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
-        update.effective_message.reply_text("sett2")
-        time.sleep(2)
-        element14.click()           
-        time.sleep(2)
-        element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-        update.effective_message.reply_text("sett1")
-        time.sleep(1.9)
-        element15.click()
-        time.sleep(2)
-        element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
-        update.effective_message.reply_text("sett2")
-        time.sleep(2)
-        element16.click()  
-        time.sleep(1.9)
-        update.effective_message.reply_text("3.5")
-        element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
-        update.effective_message.reply_text("4")
-        time.sleep(2)
-        element1.click()  
-        element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
-        update.effective_message.reply_text("5")
-        time.sleep(2)
-        element2.click()
-        elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
-        update.effective_message.reply_text("6")
-        time.sleep(2)
-        elememt3.click()
-        elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
-        update.effective_message.reply_text("7")
-        time.sleep(2)
-        elememt4.send_keys(fltr)
-        elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
-        time.sleep(2)
-        elememt5.click()
-        update.effective_message.reply_text("8")      
-    except:
-        update.effective_message.reply_text("در حین آنالیز به مشکل خوردیم! ربات اکنون کار نمیکند.")
+#def tr_or_fl(nfl, tr , fl):
+    #driver.switch_to_window(driver.window_handles[int(nfl)]])
+    #txall = 
+    
+
+
+
+
+
+
+
 
 
 
@@ -101,6 +50,74 @@ def start(bot, update):
         time.sleep(2)
         element0.click()
         windows_before  = driver.current_window_handle
+        ######
+        def filtering(ntab, fltr):
+               
+            try:
+                #nmm
+                driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+                driver.switch_to_window(driver.window_handles[int(ntab)]])
+                element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+                element10.click()
+                update.effective_message.reply_text("new tab created and clicked on dideban")
+                time.sleep(2)
+                element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("sett1")
+                time.sleep(2)
+                element11.click()
+                time.sleep(2)
+                element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
+                update.effective_message.reply_text("sett2")
+                time.sleep(2)
+                element12.click()  
+                time.sleep(1.9)
+                element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("sett1")
+                time.sleep(2)
+                element13.click()
+                time.sleep(2)
+                element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
+                update.effective_message.reply_text("sett2")
+                time.sleep(2)
+                element14.click()           
+                time.sleep(2)
+                element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("sett1")
+                time.sleep(1.9)
+                element15.click()
+                time.sleep(2)
+                element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
+                update.effective_message.reply_text("sett2")
+                time.sleep(2)
+                element16.click()  
+                time.sleep(1.9)
+                update.effective_message.reply_text("3.5")
+                element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
+                update.effective_message.reply_text("4")
+                time.sleep(2)
+                element1.click()  
+                element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
+                update.effective_message.reply_text("5")
+                time.sleep(2)
+                element2.click()
+                elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
+                update.effective_message.reply_text("6")
+                time.sleep(2)
+                elememt3.click()
+                elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
+                update.effective_message.reply_text("7")
+                time.sleep(2)
+                elememt4.send_keys(fltr)
+                elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
+                time.sleep(2)
+                elememt5.click()
+                update.effective_message.reply_text("8")      
+            except:
+                update.effective_message.reply_text("در حین آنالیز به مشکل خوردیم! ربات اکنون کار نمیکند.")
+
+        
+        
+        #######
         filtering("1", "(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0")
         filtering("2", "(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0")
         #filtering(ntab, fltr)
