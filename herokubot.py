@@ -134,10 +134,7 @@ def echo(bot, update):
                       'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند بوده است!' ,
                       'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند نبوده است.' 
 
-            
-            
-            
-                   
+  
         else:
             update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
             
@@ -145,10 +142,6 @@ def echo(bot, update):
         update.effective_message.reply_text("آه! مشکلی رخ داده، لطفا با پشتیبانی تماس بگیرید...")
         bot.send_sticker(chat_id=update.message.chat_id,
                          sticker='CAACAgIAAxkBAAIQHV8LKaspEnW1gToEbT4H1QjXXSS_AAIrAgACVp29Cp1dR4-5BfNBGgQ')
-        
-           
-
-
 
 def error(bot, update, error):
     logger.warning('Update "%s" caused error "%s"', update, error)
