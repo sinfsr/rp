@@ -25,8 +25,7 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 def start(bot, update):
     bot.send_sticker(chat_id=update.message.chat_id,
                      sticker='CAACAgIAAxkBAAIQGl8HwysLDNIkN92gF1U10eWk_LgtAAI0AgACVp29CjGNzk5PQoF3GgQ')
-    update.effective_message.reply_text("سلام! به پاندا خوش اومدی...")
-       
+    update.effective_message.reply_text("سلام! به پاندا خوش اومدی...") 
     try:
         #kol
         update.effective_message.reply_text("running.")
@@ -133,6 +132,7 @@ def echo(bot, update):
             tahlilgar(2,
                       'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند بوده است!' ,
                       'در بررسی ورود پول هوشمند با الگوریتم دوم، #' + sahm + 'دارای ورود پول هوشمند نبوده است.' 
+                     )
 
   
         else:
