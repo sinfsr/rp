@@ -18,20 +18,6 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 ########
 ########
 
-#def tr_or_fl(nfl, tr , fl):
-    #driver.switch_to_window(driver.window_handles[int(nfl)]])
-    #txall = 
-    
-
-
-
-
-
-
-
-
-
-
 
 
 def start(bot, update):
@@ -49,13 +35,13 @@ def start(bot, update):
         update.effective_message.reply_text("2")
         time.sleep(2)
         element0.click()
-        windows_before  = driver.current_window_handle
+        
         ######
-        def filtering(ntab, fltr):
-               
+        def filtering(ntab, fltr): 
             try:
                 #nmm
-                driver.execute_script("window.open('http://www.tsetmc.com/')") #1 
+                windows_before  = driver.current_window_handle
+                driver.execute_script("window.open('http://www.tsetmc.com/')") 
                 driver.switch_to_window(driver.window_handles[int(ntab)]])
                 element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
                 element10.click()
@@ -143,7 +129,18 @@ def echo(bot, update):
         update.effective_message.reply_text("در حال بررسی...")
         driver.switch_to_window(driver.window_handles[0])
         kol = driver.find_element_by_tag_name("body").text
-        if sahm in kol:       
+        if sahm in kol:
+            #def tr_or_fl(nfl, tr , fl):
+                #driver.switch_to_window(driver.window_handles[int(nfl)])
+                #txall = driver.find_element_by_tag_name("body").text
+                #if sahm in texall:
+                    
+                
+                
+                
+                
+                
+                
             driver.switch_to_window(driver.window_handles[1])
             mm1 = driver.find_element_by_tag_name("body").text
             if sahm in mm1 :
