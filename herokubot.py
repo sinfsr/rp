@@ -190,6 +190,7 @@ if __name__ == "__main__":
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('run', run))
+    dp.add_handler(CommandHandler('run1', run1))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_error_handler(error)
 
