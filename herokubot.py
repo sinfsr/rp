@@ -122,19 +122,27 @@ def echo(bot, update):
         update.effective_message.reply_text("در حال بررسی...")
         driver.switch_to_window(driver.window_handles[0])
         kol = driver.find_element_by_tag_name("body").text
-        if sahm in kol:       
-            driver.switch_to_window(driver.window_handles[1])
-            mm1 = driver.find_element_by_tag_name("body").text
-            if sahm in mm1 :
-                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول میباشد.")   
-            else:
-                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول نمیباشد.") 
-            driver.switch_to_window(driver.window_handles[2])
-            mm2 = driver.find_element_by_tag_name("body").text
-            if sahm in mm2 :
-                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم میباشد.")   
-            else:
-                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم نمیباشد.")                   
+        if sahm in kol: 
+            def tahlilgar(tfn , tr, fl):
+                driver.switch_to_window(driver.window_handles[tfn])
+                mm = driver.find_element_by_tag_name("body").text
+                if sahm in mm :
+                    update.effective_message.reply_text(tr)
+                else:
+                    update.effective_message.reply_text(fl) 
+            tahlilgar(1 ,
+                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم اول میباشد!' ,
+                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم اول نمیباشد!'
+                     )
+            tahlilgar(2 ,
+                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم دوم میباشد!' ,
+                      'سهم #' + sahm + ' دارای ورود پول هوشمند با بررسی با الگوریتم دوم نمیباشد!'
+                     )            
+            
+
+            
+            
+                   
         else:
             update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
             
