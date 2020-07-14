@@ -18,66 +18,6 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 ########
 ########
 
-def filtering(ntab, fltr): 
-    #nmm
-    windows_before  = driver.current_window_handle
-    driver.execute_script("window.open('http://www.tsetmc.com/')") 
-    driver.switch_to_window(driver.window_handles[int(ntab)]])
-    element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-    element10.click()
-    update.effective_message.reply_text("new tab created and clicked on dideban")
-    time.sleep(2)
-    element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-    update.effective_message.reply_text("sett1")
-    time.sleep(2)
-    element11.click()
-    time.sleep(2)
-    element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
-    update.effective_message.reply_text("sett2")
-    time.sleep(2)
-    element12.click()  
-    time.sleep(1.9)
-    element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-    update.effective_message.reply_text("sett1")
-    time.sleep(2)
-    element13.click()
-    time.sleep(2)
-    element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
-    update.effective_message.reply_text("sett2")
-    time.sleep(2)
-    element14.click()           
-    time.sleep(2)
-    element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-    update.effective_message.reply_text("sett1")
-    time.sleep(1.9)
-    element15.click()
-    time.sleep(2)
-    element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
-    update.effective_message.reply_text("sett2")
-    time.sleep(2)
-    element16.click()  
-    time.sleep(1.9)
-    update.effective_message.reply_text("3.5")
-    element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
-    update.effective_message.reply_text("4")
-    time.sleep(2)
-    element1.click()  
-    element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
-    update.effective_message.reply_text("5")
-    time.sleep(2)
-    element2.click()
-    elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
-    update.effective_message.reply_text("6")
-    time.sleep(2)
-    elememt3.click()
-    elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
-    update.effective_message.reply_text("7")
-    time.sleep(2)
-    elememt4.send_keys(fltr)
-    elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
-    time.sleep(2)
-    elememt5.click()
-    update.effective_message.reply_text("8")      
 
 
 
@@ -97,23 +37,77 @@ def start(bot, update):
         update.effective_message.reply_text("2")
         time.sleep(2)
         element0.click()
-        
-        ######
+        #1mm
+        windows_before  = driver.current_window_handle
+        update.effective_message.reply_text("def starting")
+        def fil(ntab , fl):
+            driver.execute_script("window.open('http://www.tsetmc.com/')")  
+            driver.switch_to_window(driver.window_handles[ntab])
+            element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+            element10.click()
+            update.effective_message.reply_text("new tab created and clicked on dideban")
+            time.sleep(2)
+            element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+            update.effective_message.reply_text("sett1")
+            time.sleep(2)
+            element11.click()
+            time.sleep(2)
+            element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
+            update.effective_message.reply_text("sett2")
+            time.sleep(2)
+            element12.click()  
+            time.sleep(1.9)
+            element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+            update.effective_message.reply_text("sett1")
+            time.sleep(2)
+            element13.click()
+            time.sleep(2)
+            element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
+            update.effective_message.reply_text("sett2")
+            time.sleep(2)
+            element14.click()           
+            time.sleep(2)
+            element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+            update.effective_message.reply_text("sett1")
+            time.sleep(1.9)
+            element15.click()
+            time.sleep(2)
+            element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
+            update.effective_message.reply_text("sett2")
+            time.sleep(2)
+            element16.click()  
+            time.sleep(1.9)
+            update.effective_message.reply_text("3.5")
+            element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
+            update.effective_message.reply_text("4")
+            time.sleep(2)
+            element1.click()  
+            element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
+            update.effective_message.reply_text("5")
+            time.sleep(2)
+            element2.click()
+            elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
+            update.effective_message.reply_text("6")
+            time.sleep(2)
+            elememt3.click()
+            elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
+            update.effective_message.reply_text("7")
+            time.sleep(2)
+            elememt4.send_keys(fl)
+            elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
+            time.sleep(2)
+            elememt5.click()
+            update.effective_message.reply_text("8")
+            
+        fil(1 , '(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        fil(2 , '(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0')
+        update.effective_message.reply_text("all done.")
 
-        
-        
-        #######
-        filtering("1", "(tvol)>(([ih][0].QTotTran5J+[ih][1].QTotTran5J+[ih][2].QTotTran5J+[ih][3].QTotTran5J+[ih][4].QTotTran5J+[ih][5].QTotTran5J+[ih][6].QTotTran5J+[ih][7].QTotTran5J+[ih][8].QTotTran5J+[ih][9].QTotTran5J+[ih][10].QTotTran5J+[ih][11].QTotTran5J+[ih][12].QTotTran5J+[ih][13].QTotTran5J+[ih][14].QTotTran5J+[ih][15].QTotTran5J+[ih][16].QTotTran5J+[ih][17].QTotTran5J+[ih][18].QTotTran5J+[ih][19].QTotTran5J+[ih][20].QTotTran5J+[ih][21].QTotTran5J+[ih][22].QTotTran5J+[ih][23].QTotTran5J+[ih][24].QTotTran5J+[ih][25].QTotTran5J+[ih][26].QTotTran5J+[ih][27].QTotTran5J+[ih][28].QTotTran5J+[ih][29].QTotTran5J)/30)&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0")
-        filtering("2", "(tvol)>1.25*[is5]&&((ct).Buy_I_Volume/(ct).Buy_CountI)>=((ct).Sell_I_Volume/(ct).Sell_CountI)&&(pl)>=(pc)&&(plp)>0")
-        #filtering(ntab, fltr)
-        #filtering(ntab, fltr)
-        #filtering(ntab, fltr)
-        #filtering(ntab, fltr)
-        #filtering(ntab, fltr)
-        
+
+
+
     except:
-        update.effective_message.reply_text("کلا به مشکل خوردیم! ربات اکنون کار نمیکند.")        
-
+        update.effective_message.reply_text("آخ! مغزم ترکید...")
         
 
 
@@ -128,36 +122,19 @@ def echo(bot, update):
         update.effective_message.reply_text("در حال بررسی...")
         driver.switch_to_window(driver.window_handles[0])
         kol = driver.find_element_by_tag_name("body").text
-        if sahm in kol:
-            #def tr_or_fl(nfl, tr , fl):
-                #driver.switch_to_window(driver.window_handles[int(nfl)])
-                #txall = driver.find_element_by_tag_name("body").text
-                #if sahm in texall:
-                    
-                
-                
-                
-                
-                
-                
+        if sahm in kol:       
             driver.switch_to_window(driver.window_handles[1])
             mm1 = driver.find_element_by_tag_name("body").text
             if sahm in mm1 :
-                update.effective_message.reply_text("سهم #" + sahm + " دارای ورود هوشمند با بررسی با الگوریتم اول میباشد!")   
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول میباشد.")   
             else:
-                update.effective_message.reply_text("سهم #" + sahm + " دارای ورود هوشمند با بررسی با الگوریتم اول نمیباشد.") 
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم اول نمیباشد.") 
             driver.switch_to_window(driver.window_handles[2])
             mm2 = driver.find_element_by_tag_name("body").text
             if sahm in mm2 :
-                update.effective_message.reply_text("سهم #" + sahm + " دارای ورود هوشمند با بررسی با الگوریتم دوم میباشد!")   
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم میباشد.")   
             else:
-                update.effective_message.reply_text("سهم #" + sahm + " دارای ورود هوشمند با بررسی با الگوریتم دوم نمیباشد.")      
-                
-                
-                
-                
-                
-                
+                update.effective_message.reply_text("این سهم داراری ورود پول با بررسی با الگوریتم دوم نمیباشد.")                   
         else:
             update.effective_message.reply_text("همم! بنظر میرسه نام سهم رو اشتباه وارد کردی دوباره تلاش کن...")  
             
