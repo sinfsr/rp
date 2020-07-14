@@ -26,8 +26,7 @@ def start(bot, update):
     bot.send_sticker(chat_id=update.message.chat_id,
                      sticker='CAACAgIAAxkBAAIQGl8HwysLDNIkN92gF1U10eWk_LgtAAI0AgACVp29CjGNzk5PQoF3GgQ')
     update.effective_message.reply_text("سلام! به پاندا خوش اومدی...")
-    
-def run(bot, update):    
+       
     try:
         #kol
         update.effective_message.reply_text("running.")
@@ -170,7 +169,6 @@ def echo(bot, update):
             def tahlilgar(tfn , tr, fl):
                 driver.switch_to_window(driver.window_handles[tfn])
                 mm = driver.find_element_by_tag_name("body").text
-                driver.refresh()
                 if sahm in mm :
                     update.effective_message.reply_text(tr)
                 else:
@@ -192,28 +190,7 @@ def echo(bot, update):
                       'x' + sahm + 'x' ,
                       'x' + sahm + 'x'
                      )
-            tahlilgar(2,
-                      'x' + sahm + 'x' ,
-                      'x' + sahm + 'x'
-                     )
-                     )
-            tahlilgar(2,
-                      'x' + sahm + 'x' ,
-                      'x' + sahm + 'x'
-                     )
-            tahlilgar(2,
-                      'x' + sahm + 'x' ,
-                      'x' + sahm + 'x'
-                     )
-                     )
-            tahlilgar(2,
-                      'x' + sahm + 'x' ,
-                      'x' + sahm + 'x'
-                     )
-            tahlilgar(2,
-                      'x' + sahm + 'x' ,
-                      'x' + sahm + 'x'
-                     )
+
             
             
             
@@ -252,7 +229,6 @@ if __name__ == "__main__":
     dp = updater.dispatcher
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
-    dp.add_handler(CommandHandler('run', run))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_error_handler(error)
 
