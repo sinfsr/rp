@@ -17,6 +17,35 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 ########
 ########
+def check(bot, update):
+    try:
+        update.effective_message.reply_text("let us get started!")
+        api_token = "daf7ae63bb884392c4f050bf67d5800ebacb1fa4"
+        username = "sinfsr"
+        pythonanywhere_host = "www.pythonanywhere.com"
+
+        api_base = "https://{pythonanywhere_host}/api/v0/user/{username}/".format(
+            pythonanywhere_host=pythonanywhere_host,
+            username=username,
+        )
+        update.effective_message.reply_text("data imported!")
+        driver.get("http://www.tsetmc.com/")
+        time.sleep(2)
+        update.effective_message.reply_text("on the website!")
+        iii = driver.find_element_by_tag_name("body").text
+        resp = requests.post(
+        urljoin(api_base, "files/path/home/{username}/foo.txt".format(username=username)),
+        files={"content": iii },
+        headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
+        )
+        update.effective_message.reply_text("it's OK!")
+    except:
+        update.effective_message.reply_text("crushed!")
+        
+        
+
+
+
 
 
 
@@ -200,6 +229,7 @@ if __name__ == "__main__":
     # Add handlers
     dp.add_handler(CommandHandler('start', start))
     dp.add_handler(CommandHandler('run', run))
+    dp.add_handler(CommandHandler('check', check))
     dp.add_handler(CommandHandler('run1', run1))
     dp.add_handler(MessageHandler(Filters.text, echo))
     dp.add_error_handler(error)
