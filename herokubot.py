@@ -33,6 +33,7 @@ def python(bot, update):
                 pythonanywhere_host=pythonanywhere_host,
                 username=username,
             )
+            update.effective_message.reply_text("conected to P.A .")
             def fill(txtname , fl):
                 driver.get("http://www.tsetmc.com/")  
                 element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
@@ -84,20 +85,20 @@ def python(bot, update):
                 files={"content": iii },
                 headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
                 )
-                driver.quit()
+                update.effective_message.reply_text("done befor close.")
+                driver.close()
             fill("1.txt" , "abc")
+            update.effective_message.reply_text("1 done.")
             fill("2.txt" , "abc")
+            update.effective_message.reply_text("2 done.")
         except:
-            resp = requests.post(
-            urljoin(api_base, "files/path/home/{username}/foo.txt".format(username=username)),
-            files={"content": "crushed"},
-            headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
-            )
+            update.effective_message.reply_text("not done.")
             try:
-                driver.quit()
+                
+                driver.close()
+                update.effective_message.reply_text("driver closed.")
             except:
-                print("I'm not gonna see this.")
-
+                update.effective_message.reply_text("driver close not working.")
 
 
 
