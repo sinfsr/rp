@@ -365,7 +365,7 @@ def error(bot, update, error):
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
-    TOKEN = "1139770167:AAErOC1_mzcX3mOl671nu2DOTUV9ubh8V28"
+    TOKEN = "1288252194:AAFaP4cesfWHdkmgATeLx2XTU4pJaLJnTHo"
     NAME = "pandatbot"
 
     # Port is given by Heroku
