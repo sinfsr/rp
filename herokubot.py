@@ -24,9 +24,11 @@ def python(bot, update):
     update.effective_message.reply_text("let's go.")
     while True:
         update.effective_message.reply_text("while true started.")
-        driver.get("http://www.google.com/") 
-        windows_before  = driver.current_window_handle
+
         try:
+            driver.get("http://www.google.com/") 
+            windows_before  = driver.current_window_handle
+            update.effective_message.reply_text("went DOODLE.")
             api_token = "daf7ae63bb884392c4f050bf67d5800ebacb1fa4"
             username = "sinfsr"
             pythonanywhere_host = "www.pythonanywhere.com"
@@ -369,7 +371,7 @@ def error(bot, update, error):
 
 if __name__ == "__main__":
     # Set these variable to the appropriate values
-    TOKEN = "1288252194:AAFaP4cesfWHdkmgATeLx2XTU4pJaLJnTHo"
+    TOKEN = "1372902187:AAHhZX9zsmuokM9EQBkNSBfeW1QH-QexCWM"
     NAME = "pandatbot"
 
     # Port is given by Heroku
