@@ -24,6 +24,8 @@ def python(bot, update):
     update.effective_message.reply_text("let's go.")
     while True:
         update.effective_message.reply_text("while true started.")
+        driver.get("http://www.google.com/") 
+        windows_before  = driver.current_window_handle
         try:
             api_token = "daf7ae63bb884392c4f050bf67d5800ebacb1fa4"
             username = "sinfsr"
@@ -34,8 +36,9 @@ def python(bot, update):
                 username=username,
             )
             update.effective_message.reply_text("conected to P.A .")
-            def fill(txtname , fl):
-                driver.get("http://www.tsetmc.com/")  
+            def fill(ntab , txtname , fl):
+                driver.execute_script("window.open('http://www.tsetmc.com/')")  
+                driver.switch_to_window(driver.window_handles[ntab])
                 element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
                 element10.click()
                 time.sleep(2)
@@ -86,10 +89,11 @@ def python(bot, update):
                 headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
                 )
                 update.effective_message.reply_text("done befor close.")
+                driver.switch_to_window(driver.window_handles[ntab])
                 driver.close()
-            fill("1.txt" , "abc")
+            fill(1 , "1.txt" , "abc")
             update.effective_message.reply_text("1 done.")
-            fill("2.txt" , "abc")
+            fill(2 , "2.txt" , "efg")
             update.effective_message.reply_text("2 done.")
         except:
             update.effective_message.reply_text("not done.")
@@ -98,7 +102,7 @@ def python(bot, update):
                 driver.close()
                 update.effective_message.reply_text("driver closed.")
             except:
-                update.effective_message.reply_text("driver close not working.")
+                update.effective_message.reply_text("driver was'nt oppen.")
 
 
 
