@@ -1,4 +1,6 @@
 python-telegram-bot
 selenium~=3.141.0
 clipboard~=0.0.4
+requests~=2.7.0
+urllib3~=1.25.9
 
