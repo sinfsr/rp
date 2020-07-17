@@ -9,7 +9,6 @@ from pprint import pprint
 import requests
 from urllib.parse import urljoin
 
-
 ########
 ########
 chrome_options = webdriver.ChromeOptions()
