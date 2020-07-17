@@ -86,6 +86,7 @@ def check(bot, update):
                 elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
                 update.effective_message.reply_text("Almost there.")
                 time.sleep(2)
+                elememt4.clear()
                 elememt4.send_keys(fl)
                 elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
                 time.sleep(2)
