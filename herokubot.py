@@ -100,8 +100,16 @@ def check(bot, update):
                 )
                 update.effective_message.reply_text("it's OK!")
 
-            fill(0 , "foo.txt", "abc" )
-            fill(1 , "1.txt", "abcdef" )
+            fill(0 , "FILE_NAME_1", "FILTER_1" )
+            fill(0 , "FILE_NAME_2", "FILTER_2" )
+            fill(0 , "FILE_NAME_3", "FILTER_3" )
+            fill(0 , "FILE_NAME_4", "FILTER_4" )
+            fill(0 , "FILE_NAME_5", "FILTER_5" )
+            fill(0 , "FILE_NAME_6", "FILTER_6" )
+            fill(0 , "FILE_NAME_7", "FILTER_7" )
+            fill(0 , "FILE_NAME_8", "FILTER_8" )
+            fill(0 , "FILE_NAME_9", "FILTER_9" )
+            fill(0 , "FILE_NAME_10", "FILTER_10" )
 
 
 
