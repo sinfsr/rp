@@ -21,99 +21,100 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 ########
 ########
 def check(bot, update):
-    try:
-        update.effective_message.reply_text("let us get started!")
-        api_token = "daf7ae63bb884392c4f050bf67d5800ebacb1fa4"
-        username = "sinfsr"
-        pythonanywhere_host = "www.pythonanywhere.com"
+    while True:
+        try:
+            update.effective_message.reply_text("let us get started!")
+            api_token = "daf7ae63bb884392c4f050bf67d5800ebacb1fa4"
+            username = "sinfsr"
+            pythonanywhere_host = "www.pythonanywhere.com"
 
-        api_base = "https://{pythonanywhere_host}/api/v0/user/{username}/".format(
-            pythonanywhere_host=pythonanywhere_host,
-            username=username,
-        )
-        update.effective_message.reply_text("data imported , starting def!")
-        
-        def fill(ntab , txtname , fl):
-            driver.get("http://www.tsetmc.com/")  
-            #driver.switch_to_window(driver.window_handles[ntab])
-            element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
-            element10.click()
-            update.effective_message.reply_text("new tab created and clicked on dideban.")
-            time.sleep(2)
-            element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("set11")
-            time.sleep(2)
-            element11.click()
-            time.sleep(2)
-            element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
-            update.effective_message.reply_text("set12")
-            time.sleep(2)
-            element12.click()  
-            time.sleep(1.9)
-            element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("set21")
-            time.sleep(2)
-            element13.click()
-            time.sleep(2)
-            element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
-            update.effective_message.reply_text("set22")
-            time.sleep(2)
-            element14.click()           
-            time.sleep(2)
-            element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
-            update.effective_message.reply_text("set31")
-            time.sleep(1.9)
-            element15.click()
-            time.sleep(2)
-            element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
-            update.effective_message.reply_text("set32")
-            time.sleep(2)
-            element16.click()  
-            time.sleep(1.9)
-            update.effective_message.reply_text("starting filter.")
-            element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
-            time.sleep(2)
-            element1.click()  
-            element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
-            update.effective_message.reply_text("locating and so on.")
-            time.sleep(2)
-            element2.click()
-            elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
-            update.effective_message.reply_text("So")
-            time.sleep(2)
-            elememt3.click()
-            elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
-            update.effective_message.reply_text("Almost there.")
-            time.sleep(2)
-            elememt4.send_keys(fl)
-            elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
-            time.sleep(2)
-            elememt5.click()
-            update.effective_message.reply_text("on the website!")
-            iii = driver.find_element_by_tag_name("body").text
-            resp = requests.post(
-            urljoin(api_base, "files/path/home/{username}/{txtname}".format(username=username , txtname=txtname)),
-            files={"content": iii },
-            headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
+            api_base = "https://{pythonanywhere_host}/api/v0/user/{username}/".format(
+                pythonanywhere_host=pythonanywhere_host,
+                username=username,
             )
-            update.effective_message.reply_text("it's OK!")
-            
-        fill(0 , "foo.txt", "abc" )
-        fill(1 , "1.txt", "abcdef" )
+            update.effective_message.reply_text("data imported , starting def!")
+
+            def fill(ntab , txtname , fl):
+                driver.get("http://www.tsetmc.com/")  
+                #driver.switch_to_window(driver.window_handles[ntab])
+                element10 = driver.find_element(By.XPATH , '/html/body/div[3]/div[2]/a[4]')
+                element10.click()
+                update.effective_message.reply_text("new tab created and clicked on dideban.")
+                time.sleep(2)
+                element11 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("set11")
+                time.sleep(2)
+                element11.click()
+                time.sleep(2)
+                element12 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[32]')
+                update.effective_message.reply_text("set12")
+                time.sleep(2)
+                element12.click()  
+                time.sleep(1.9)
+                element13 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("set21")
+                time.sleep(2)
+                element13.click()
+                time.sleep(2)
+                element14 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[33]')
+                update.effective_message.reply_text("set22")
+                time.sleep(2)
+                element14.click()           
+                time.sleep(2)
+                element15 = driver.find_element(By.XPATH , '//*[@id="id1"]')
+                update.effective_message.reply_text("set31")
+                time.sleep(1.9)
+                element15.click()
+                time.sleep(2)
+                element16 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[34]')
+                update.effective_message.reply_text("set32")
+                time.sleep(2)
+                element16.click()  
+                time.sleep(1.9)
+                update.effective_message.reply_text("starting filter.")
+                element1 = driver.find_element(By.XPATH , '/html/body/div[6]/div[1]/a[7]')
+                time.sleep(2)
+                element1.click()  
+                element2 = driver.find_element(By.XPATH , '//*[@id="FilterIndex"]/div[1]')
+                update.effective_message.reply_text("locating and so on.")
+                time.sleep(2)
+                element2.click()
+                elememt3 = driver.find_element(By.XPATH , '/html/body/div[7]/div[3]/div[1]/div[1]')
+                update.effective_message.reply_text("So")
+                time.sleep(2)
+                elememt3.click()
+                elememt4 = driver.find_element(By.XPATH , '//*[@id="InputFilterCode"]')
+                update.effective_message.reply_text("Almost there.")
+                time.sleep(2)
+                elememt4.send_keys(fl)
+                elememt5 = driver.find_element(By.XPATH , '//*[@id="FilterContent"]/div[1]')
+                time.sleep(2)
+                elememt5.click()
+                update.effective_message.reply_text("on the website!")
+                iii = driver.find_element_by_tag_name("body").text
+                resp = requests.post(
+                urljoin(api_base, "files/path/home/{username}/{txtname}".format(username=username , txtname=txtname)),
+                files={"content": iii },
+                headers={"Authorization": "Token {api_token}".format(api_token=api_token)}
+                )
+                update.effective_message.reply_text("it's OK!")
+
+            fill(0 , "foo.txt", "abc" )
+            fill(1 , "1.txt", "abcdef" )
 
 
-        
-        
-        
-        
-        
-        
 
 
 
-    except:
-        update.effective_message.reply_text("crushed!")
-        
+
+
+
+
+
+
+        except:
+            update.effective_message.reply_text("crushed!")
+
         
 
 
