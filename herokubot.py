@@ -138,7 +138,7 @@ def check(bot, update):
 if __name__ == "__main__":
     # Set these variable to the appropriate values
     TOKEN = "TL_TOKEN"
-    NAME = "HRK_NAME"
+    NAME = "1372902187:AAHhZX9zsmuokM9EQBkNSBfeW1QH-QexCWM"
 
     # Port is given by Heroku
     PORT = os.environ.get('PORT')
