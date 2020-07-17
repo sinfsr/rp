@@ -99,6 +99,7 @@ def check(bot, update):
             update.effective_message.reply_text("it's OK!")
             
         fill(0 , "foo.txt", "abc" )
+        fill(1 , "1.txt", "abcdef" )
 
 
         
