@@ -124,6 +124,7 @@ def check(bot, update):
                 fill(0 , "22.txt", '(pe)>=300' )
                 fill(0 , "23.txt", '(pe)<=15' )
                 fill(0 , "24.txt", '(eps)>=5000' )
+                fill(0 , "kol.txt", '' )
 
                 
                 
