@@ -43,6 +43,11 @@ def tw(bot, update):
         el4.send_keys(a)
         el4.send_keys(" #LiveLikeAli ")
         update.effective_message.reply_text("done")
+        el5 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]/div[3]/div/span/span')
+        el5.click()
+        time.sleep(2)
+        
+    
 
     
 
@@ -204,8 +209,7 @@ if __name__ == "__main__":
     dp = updater.dispatcher
     # Add handlers
     dp.add_handler(CommandHandler('check', check))
-    dp.add_handler(CommandHandler('check', tw))
-    
+    dp.add_handler(CommandHandler('tw', tw))
 
     # Start the webhook
     updater.start_webhook(listen="0.0.0.0",
