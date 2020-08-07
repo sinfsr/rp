@@ -34,6 +34,8 @@ def tw(bot, update):
         el3 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[3]/div/div')
         el3.click()
         update.effective_message.reply_text("loged in.")
+        driver.save_screenshot("screenshot.png")
+        update.send_photo(chat_id, photo=open('./screenshot.png', 'rb'))
 
         time.sleep(2)
         z = 21
