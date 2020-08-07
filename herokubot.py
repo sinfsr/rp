@@ -21,32 +21,38 @@ driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), c
 ########
 
 def tw(bot, update):
-    driver.get("https://twitter.com/login")
-    update.effective_message.reply_text("on the fire.")
-    time.sleep(2)
-    el1 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[1]/label/div/div[2]/div/input')
-    #el1.click()
-    el1.send_keys("mofsedefelfarsh")
-    el2 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[2]/label/div/div[2]/div/input')
-    #el1.click()
-    el2.send_keys("qqq159357")
-    update.effective_message.reply_text("loged in.")
-    el3 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[3]/div/div')
-    el3.click()
-
-    time.sleep(3)
-    a = 21
-    while True:
-        a += 1
-        print(a)
-        el4 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div')
-        el4.send_keys(a)
-        el4.send_keys(" #LiveLikeAli ")
-        update.effective_message.reply_text("done")
-        el5 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]/div[3]/div/span/span')
-        el5.click()
+    try:
+        driver.get("https://twitter.com/login")
+        update.effective_message.reply_text("on the fire.")
         time.sleep(2)
-        
+        el1 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[1]/label/div/div[2]/div/input')
+        #el1.click()
+        el1.send_keys("mofsedefelfarsh")
+        el2 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[2]/label/div/div[2]/div/input')
+        #el1.click()
+        el2.send_keys("qqq159357")
+        el3 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[3]/div/div')
+        el3.click()
+        update.effective_message.reply_text("loged in.")
+
+        time.sleep(2)
+        z = 21
+        while True:
+            update.effective_message.reply_text("while true started")
+            z += 1
+            update.effective_message.reply_text("z calculated.")
+            el4 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div')
+            el4.send_keys(z)
+            el4.send_keys(" #LiveLikeAli ")
+            
+            el5 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div[1]/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div/div/div[2]/div[3]/div/span/span')
+            el5.click()
+            time.sleep(2)
+            update.effective_message.reply_text("done")
+        except:
+            update.effective_message.reply_text("eror")
+            
+
     
 
     
