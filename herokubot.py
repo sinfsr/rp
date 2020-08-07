@@ -19,6 +19,38 @@ chrome_options.add_argument("--no-sandbox")
 driver = webdriver.Chrome(executable_path=os.environ.get("CHROMEDRIVER_PATH"), chrome_options=chrome_options)
 ########
 ########
+
+def tw(bot, update):
+    driver.get("https://twitter.com/login")
+    update.effective_message.reply_text("on the fire.")
+    time.sleep(2)
+    el1 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[1]/label/div/div[2]/div/input')
+    #el1.click()
+    el1.send_keys("mofsedefelfarsh")
+    el2 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[2]/label/div/div[2]/div/input')
+    #el1.click()
+    el2.send_keys("qqq159357")
+    update.effective_message.reply_text("loged in.")
+    el3 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div[1]/form/div/div[3]/div/div')
+    el3.click()
+
+    time.sleep(3)
+    a = 21
+    while True:
+        a += 1
+        print(a)
+        el4 = driver.find_element_by_xpath('//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[2]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div[1]/div/div/div/div[2]/div/div/div/div')
+        el4.send_keys(a)
+        el4.send_keys(" #LiveLikeAli ")
+        update.effective_message.reply_text("done")
+
+    
+
+
+
+
+
+
 def check(bot, update):
     while True:
         try:
@@ -172,6 +204,7 @@ if __name__ == "__main__":
     dp = updater.dispatcher
     # Add handlers
     dp.add_handler(CommandHandler('check', check))
+    dp.add_handler(CommandHandler('check', tw))
     
 
     # Start the webhook
