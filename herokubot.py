@@ -49,9 +49,9 @@ def tw(bot, update):
             el5.click()
             time.sleep(2)
             update.effective_message.reply_text("done")
-        except:
-            update.effective_message.reply_text("eror")
-            
+    except:
+        update.effective_message.reply_text("eror")
+
 
     
 
